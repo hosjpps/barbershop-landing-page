@@ -57,7 +57,9 @@ export function Footer() {
             <p className="text-muted-foreground mb-4">Подписывайтесь на нас</p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
                 aria-label="Instagram"
               >
@@ -66,7 +68,9 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://vk.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
                 aria-label="VK"
               >
@@ -75,7 +79,9 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://wa.me/79991234567"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
                 aria-label="WhatsApp"
               >
@@ -84,7 +90,9 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://t.me/kingsbarber"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
                 aria-label="Telegram"
               >

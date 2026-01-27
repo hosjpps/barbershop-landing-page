@@ -113,7 +113,11 @@ export function ServicesSection() {
                     <span>{service.duration}</span>
                   </div>
                 </div>
-                <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80 font-medium">
+                <Button 
+                  variant="link" 
+                  className="p-0 h-auto text-accent hover:text-accent/80 font-medium"
+                  onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Записаться →
                 </Button>
               </CardContent>

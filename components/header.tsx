@@ -63,7 +63,10 @@ export function Header() {
               <Phone className="h-4 w-4" />
               <span>+7 (999) 123-45-67</span>
             </a>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 transition-transform hover:-translate-y-0.5">
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 transition-transform hover:-translate-y-0.5"
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Записаться
             </Button>
           </div>
@@ -101,7 +104,13 @@ export function Header() {
             <Phone className="h-5 w-5" />
             <span>+7 (999) 123-45-67</span>
           </a>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-4 w-full">
+          <Button 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-4 w-full"
+            onClick={() => {
+              setIsMobileMenuOpen(false)
+              document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
             Записаться
           </Button>
         </nav>

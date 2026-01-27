@@ -13,6 +13,10 @@ const trustBadges = [
 export function HeroSection() {
   const statsRef = useRef<HTMLDivElement>(null)
 
+  const scrollToServices = () => {
+    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   useEffect(() => {
     console.log("[v0] HeroSection mounted")
     const observer = new IntersectionObserver(
@@ -33,8 +37,8 @@ export function HeroSection() {
     return () => observer.disconnect()
   }, [])
 
-  const scrollToServices = () => {
-    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })
   }
 
   const scrollToPricing = () => {
@@ -67,7 +71,7 @@ export function HeroSection() {
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg transition-transform hover:-translate-y-1"
-            onClick={scrollToServices}
+            onClick={scrollToBooking}
           >
             Записаться онлайн
           </Button>
@@ -97,7 +101,7 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <button
-        onClick={scrollToServices}
+        onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Scroll down"
       >
