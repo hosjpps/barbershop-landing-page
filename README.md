@@ -1,30 +1,47 @@
-# Barbershop landing page
+# King's Barber — лендинг барбершопа
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Одностраничный сайт-лендинг премиального мужского барбершопа: услуги, мастера, цены, галерея и онлайн-запись. Адаптивный, с поддержкой светлой и тёмной темы.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vasinsergey2018-4938s-projects/v0-barbershop-landing-page)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/cLG2ftSQ6zD)
+## Возможности
 
-## Overview
+- Одностраничная структура из тематических секций: hero, услуги, преимущества, этапы работы, мастера, цены, галерея, отзывы, контакты.
+- Форма онлайн-записи с выбором услуги, даты и времени и клиентской валидацией (имя, корректный номер телефона).
+- Переключение светлой и тёмной темы (`next-themes`).
+- Навигационные элементы UX: индикатор прогресса прокрутки, плавающие кнопки и кнопка «наверх».
+- Интеграция с Vercel Analytics.
+- SEO-метаданные и Open Graph, локализация под русский язык (`lang="ru"`).
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Стек
 
-## Deployment
+- **Next.js 16** (App Router) + **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui** на базе Radix UI, иконки **lucide-react**
+- `next-themes`, `react-hook-form`, `zod`, `embla-carousel`, `recharts`
+- Менеджер пакетов **pnpm**
 
-Your project is live at:
+## Структура
 
-**[https://vercel.com/vasinsergey2018-4938s-projects/v0-barbershop-landing-page](https://vercel.com/vasinsergey2018-4938s-projects/v0-barbershop-landing-page)**
+```
+app/         — корневой layout, главная страница, глобальные стили
+components/   — секции лендинга (hero, services, pricing, booking и др.)
+components/ui — переиспользуемые UI-компоненты (shadcn/ui)
+lib/          — вспомогательные утилиты
+public/       — статические ассеты
+```
 
-## Build your app
+## Запуск
 
-Continue building your app on:
+```bash
+pnpm install
+pnpm dev
+```
 
-**[https://v0.app/chat/cLG2ftSQ6zD](https://v0.app/chat/cLG2ftSQ6zD)**
+Приложение будет доступно на `http://localhost:3000`.
 
-## How It Works
+Сборка production-версии:
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```bash
+pnpm build
+pnpm start
+```
